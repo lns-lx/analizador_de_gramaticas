@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramática Formal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procesador de Gramática Formal</h1>
+        <textarea id="grammarInput" placeholder="Ingrese la gramática (ej. S -> Sa | b; A -> Ac | d)"></textarea>
+        <button onclick="processGrammar()">Procesar Gramática</button>
+
+        <h2>Gramática Original</h2>
+        <pre id="originalGrammar"></pre>
+
+        <h2>Después de eliminar recursión por la izquierda</h2>
+        <pre id="noRecursionGrammar"></pre>
+
+        <h2>Después de factorizar la gramática</h2>
+        <pre id="factoredGrammar"></pre>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
