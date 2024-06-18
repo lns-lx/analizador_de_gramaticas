@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador Léxico</title>
+    <link rel="stylesheet" href="css/lexicalAnalyzerStyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Analizador Léxico</h1>
+        <textarea id="codeTextArea" placeholder="Ingrese su código aquí"></textarea>
+        <button id="btnAnalyzeLexical">Analizar Código</button>
+        <button id="btnClear">Limpiar</button>
+
+        <div id="errorLexical" class="error"></div>
+
+        <h3>Tokens Encontrados</h3>
+        <table id="tokensTable">
+            <thead>
+                <tr>
+                    <th>Línea</th>
+                    <th>Token</th>
+                    <th>Atributo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se insertarán los tokens -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/lexico.js"></script>
+</body>
+</html>
