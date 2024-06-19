@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador Gramatical</title>
+    <link rel="stylesheet" href="css/grammarAnalyzerStyles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Analizador Gramatical</h2>
+        <textarea id="grammarInput" placeholder="Ingrese la gramática (ej. S -> Sa | b; A -> Ac | d)"></textarea>
+        <button id="btnAnalyzeGrammar">Procesar Gramática</button>
+
+        <div id="errorGrammar" class="error"></div>
+
+        <h3>Gramática Original</h3>
+        <pre id="originalGrammar"></pre>
+
+        <h3>Después de eliminar recursión por la izquierda</h3>
+        <pre id="noRecursionGrammar"></pre>
+
+        <h3>Después de factorizar la gramática</h3>
+        <pre id="factoredGrammar"></pre>
+    </div>
+    <script type="module" src="js/gramatical.js"></script>
+</body>
+</html>
