@@ -1,0 +1,54 @@
+## RECURSIVIDAD
+
+A -> A a | b
+
+A -> b A'
+A' -> a A' | ε
+
+///////////////
+
+E -> E + T | T
+T -> T * F | F
+F -> ( E ) | id
+
+E -> T E'
+E' -> + T E' | ε
+T -> F T'
+T' -> * F T' | ε
+F -> ( E ) | id
+
+## AMBIGUEDAD
+
+S -> if E then S | if E then S else S | other
+
+S -> if E then S S'
+S' -> else S | ε
+S -> other
+
+///////////////
+
+A -> aB | aC
+B -> b
+C -> c
+
+A -> a A'
+A' -> B | C
+B -> b
+C -> c
+
+## PRIMEROS Y SEGUNDOS
+
+S: {a, b}
+A: {a, ε}
+B: {b}
+a: {a}
+b: {b}
+
+S: {$}
+A: {b, $}
+B: {$}
+
+S -> A B
+A -> a A
+A -> ε
+B -> b

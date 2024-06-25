@@ -1,0 +1,18 @@
+.copy-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: none; /* Ocultamos el botón por defecto */
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+    color: #fff;
+}

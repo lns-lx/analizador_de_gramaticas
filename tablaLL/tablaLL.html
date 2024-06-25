@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construcción de Tabla LL(1)</title>
+    <link rel="stylesheet" href="./tablaLL.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Construcción de Tabla LL(1)</h1>
+        
+        <div class="input-section">
+            <h2>Primeros:</h2>
+            <textarea id="first-input" placeholder="Ingrese los conjuntos FIRST aquí..."></textarea>
+            <h2>Siguientes:</h2>
+            <textarea id="follow-input" placeholder="Ingrese los conjuntos FOLLOW aquí..."></textarea>
+            <h2>Gramática:</h2>
+            <textarea id="grammar-input" placeholder="Ingrese la gramática aquí..."></textarea>
+        </div>
+        
+        <div class="button-section">
+            <button id="construct-table">Construir Tabla LL(1)</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Tabla LL(1):</h2>
+            <div id="table-output"></div>
+        </div>
+
+        <a href="../index.html" class="button">Volver al Menú</a>
+    </div>
+    
+    <script src="./tablaLL.js"></script>
+</body>
+</html>
