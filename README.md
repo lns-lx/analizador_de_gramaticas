@@ -113,31 +113,3 @@ A -> a A
 A -> ε
 B -> b
 ```
-
-## Instalación
-
-Para ejecutar este proyecto, simplemente clona el repositorio y abre `index.html` en tu navegador web preferido.
-
-```bash
-git clone https://github.com/tu_usuario/tabla-LL1.git
-cd tabla-LL1
-open index.html
-```
-
-## Contribución
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para mejoras, correcciones de errores o nuevas características.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT.
-
----
-
-## Autor
-
-- **Tu Nombre** - [tu_usuario](https://github.com/tu_usuario)
-
----
-
-Disfruta construyendo tablas LL(1) de manera fácil y rápida con esta herramienta. ¡Feliz programación!
