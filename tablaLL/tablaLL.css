@@ -1,3 +1,30 @@
+@keyframes scrollBg {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-330px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.scroll-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-bottom: 330px;
+    background-color: #E8BA9B;
+    background-image: url('/funcionalidades/image.jpg');
+    background-size: cover;
+    animation: scrollBg 35s linear infinite;
+}
+
+/***********************************/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -10,7 +37,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.7);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);

@@ -1,0 +1,25 @@
+@keyframes scrollBg {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-330px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.scroll-bg {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding-bottom: 330px;
+    background-color: #E8BA9B;
+    background-image: url('image.jpg');
+    background-size: cover;
+    animation: scrollBg 35s linear infinite;
+}

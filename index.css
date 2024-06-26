@@ -10,7 +10,7 @@ body {
 .container {
     max-width: 800px;
     margin: auto;
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.7);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -31,7 +31,7 @@ h1 {
 }
 
 .button {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     background-color: #4caf50;
     color: #000;
@@ -41,7 +41,7 @@ h1 {
     text-decoration: none;
     text-align: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 95%;
     transition: background-color 0.3s, color 0.3s;
 }
 
