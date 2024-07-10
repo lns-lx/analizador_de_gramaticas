@@ -134,22 +134,24 @@ function calculateFollow(rules, nonTerminals, terminals, FIRST) {
 document.addEventListener('DOMContentLoaded', () => {
     const grammarInput = document.getElementById('grammar-input');
     const calculateBtn = document.getElementById('calculate-first-follow');
-    const output = document.getElementById('output');
+    const firstOutput = document.getElementById('first-output');
+    const followOutput = document.getElementById('follow-output');
 
     calculateBtn.addEventListener('click', () => {
         const grammar = grammarInput.value;
         const result = calculateFirstAndFollow(grammar);
         
-        let outputText = "PRIMERO:\n";
+        let firstOutputText = "";
         for (let [nt, first] of Object.entries(result.FIRST)) {
-            outputText += `${nt}: {${Array.from(first).join(', ')}}\n`;
+            firstOutputText += `${nt}: {${Array.from(first).join(', ')}}\n`;
         }
         
-        outputText += "\nSIGUIENTE:\n";
+        let followOutputText = "";
         for (let [nt, follow] of Object.entries(result.FOLLOW)) {
-            outputText += `${nt}: {${Array.from(follow).join(', ')}}\n`;
+            followOutputText += `${nt}: {${Array.from(follow).join(', ')}}\n`;
         }
         
-        output.textContent = outputText;
+        firstOutput.value = firstOutputText;
+        followOutput.value = followOutputText;
     });
 });

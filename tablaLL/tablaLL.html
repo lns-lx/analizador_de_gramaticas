@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construcción de Tabla LL(1)</title>
     <link rel="stylesheet" href="./tablaLL.css">
+    <script src="./copyHelper.js" defer></script>
     
 </head>
 <body>
@@ -13,11 +14,17 @@
         
         <div class="input-section">
             <h2>Primeros:</h2>
-            <textarea id="first-input" placeholder="Ingrese los conjuntos FIRST aquí..."></textarea>
+            <textarea id="first-input" placeholder="Ingrese los conjuntos PRIMEROS aquí..."></textarea>
+            <button class="copy-button" onclick="copyText('first-input')">Copiar Primeros</button>
+
             <h2>Siguientes:</h2>
-            <textarea id="follow-input" placeholder="Ingrese los conjuntos FOLLOW aquí..."></textarea>
+            <textarea id="follow-input" placeholder="Ingrese los conjuntos SIGUIENTES aquí..."></textarea>
+            <button class="copy-button" onclick="copyText('follow-input')">Copiar Siguientes</button>
+
             <h2>Gramática:</h2>
             <textarea id="grammar-input" placeholder="Ingrese la gramática aquí..."></textarea>
+            <button class="copy-button" onclick="copyText('grammar-input')">Copiar Gramática</button>
+            
         </div>
         
         <div class="button-section">

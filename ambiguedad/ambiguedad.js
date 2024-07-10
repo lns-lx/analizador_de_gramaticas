@@ -27,7 +27,7 @@ function solveAmbiguity(grammar) {
     
     let newGrammar = Object.entries(newRules).map(([left, right]) => `${left} -> ${right}`).join('\n');
     
-    return "Gramática con ambigüedad reducida:\n" + newGrammar;
+    return newGrammar;
 }
 
 function findCommonPrefix(productions) {

@@ -103,3 +103,23 @@ th {
 td {
     background-color: #0a0a0a;
 }
+
+/********************************/
+.copy-button {
+    display: inline-block;
+    padding: 5px 10px; /* Ajusta el padding según sea necesario */
+    background-color: #4CAF50;
+    color: #000;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 10px; /* Espacio entre el textarea y el botón */
+    float: right; /* Alinea a la derecha */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+    color: #fff;
+}

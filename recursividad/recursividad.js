@@ -23,7 +23,7 @@ function solveRecursion(grammar) {
     
     let newGrammar = Object.entries(newRules).map(([left, right]) => `${left} -> ${right}`).join('\n');
     
-    return "Gramática sin recursividad por la izquierda:\n" + newGrammar;
+    return newGrammar;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

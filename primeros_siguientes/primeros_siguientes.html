@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeros y Siguientes</title>
     <link rel="stylesheet" href="./primeros_siguientes.css">
-    
+    <script src="./copyHelper.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -13,6 +13,7 @@
         
         <div class="input-section">
             <textarea id="grammar-input" placeholder="Ingrese la gramática aquí..."></textarea>
+            <button class="copy-button" onclick="copyText('grammar-input')">Copiar Entrada</button>
         </div>
         
         <div class="button-section">
@@ -20,12 +21,18 @@
         </div>
         
         <div class="output-section">
-            <h2>Resultado:</h2>
-            <pre id="output"></pre>
+            <h2>Primeros:</h2>
+            <textarea id="first-output" readonly></textarea>
+            <button class="copy-button" onclick="copyText('first-output')">Copiar Primeros</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Siguientes:</h2>
+            <textarea id="follow-output" readonly></textarea>
+            <button class="copy-button" onclick="copyText('follow-output')">Copiar Siguientes</button>
         </div>
 
         <a href="../index.html" class="button">Volver al Menú</a>
-
     </div>
     <div class="scroll-bg"></div>
     <script src="./primeros_siguientes.js"></script>
