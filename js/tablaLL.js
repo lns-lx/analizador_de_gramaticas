@@ -19,23 +19,22 @@ function parseGrammar(grammar) {
         if (!rules[left]) {
             rules[left] = [];
         }
-        rules[left].push(right);
+        rules[left] = rules[left].concat(right.split('|').map(p => p.trim()));
     });
     return rules;
 }
 
 function constructLL1Table(FIRST, FOLLOW, grammar) {
     const table = {};
-    const nonTerminals = Object.keys(FOLLOW);
-    const terminals = new Set();
+    const nonTerminals = Object.keys(grammar);
+    const terminals = new Set(['$']);
     
-    // Collect all terminals
+    // Recolectar todos los terminales
     Object.values(FIRST).forEach(set => set.forEach(terminal => {
         if (terminal !== 'ε') terminals.add(terminal);
     }));
-    terminals.add('$');
 
-    // Initialize table
+    // Inicializar tabla
     nonTerminals.forEach(nt => {
         table[nt] = {};
         terminals.forEach(t => {
@@ -43,7 +42,7 @@ function constructLL1Table(FIRST, FOLLOW, grammar) {
         });
     });
 
-    // Fill the table
+    // Llenar la tabla
     Object.entries(grammar).forEach(([nt, productions]) => {
         productions.forEach(production => {
             const productionFirst = calculateProductionFirst(production, FIRST);
@@ -56,13 +55,21 @@ function constructLL1Table(FIRST, FOLLOW, grammar) {
 
             if (productionFirst.has('ε')) {
                 FOLLOW[nt].forEach(symbol => {
-                    table[nt][symbol] = production;
+                    if (symbol === '$' || !table[nt][symbol]) {
+                        table[nt][symbol] = production;
+                    }
                 });
             }
         });
     });
 
-    return { table, terminals: Array.from(terminals), nonTerminals };
+    // Ordenar los terminales, pero asegurarse de que '$' esté al final
+    const sortedTerminals = Array.from(terminals)
+        .filter(t => t !== '$')
+        .sort();
+    sortedTerminals.push('$');
+
+    return { table, terminals: sortedTerminals, nonTerminals };
 }
 
 function calculateProductionFirst(production, FIRST) {
@@ -94,6 +101,7 @@ function generateTableHTML(tableData) {
     const { table, terminals, nonTerminals } = tableData;
     let html = '<table><tr><th></th>';
     
+    // Los terminales ya están ordenados, así que solo los iteramos
     terminals.forEach(t => {
         html += `<th>${t}</th>`;
     });

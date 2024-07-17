@@ -1,7 +1,8 @@
 // Función para convertir la tabla HTML a formato JSON
 function tableToJSON(table) {
     const headers = Array.from(table.querySelectorAll('th:not(:first-child)'))
-        .map(th => th.textContent.trim());
+        .map(th => th.textContent.trim())
+        .sort(); // Ordenar los headers (terminales)
     
     const rows = Array.from(table.querySelectorAll('tr:not(:first-child)'));
     
@@ -11,9 +12,7 @@ function tableToJSON(table) {
         
         acc[nonTerminal] = headers.reduce((rowAcc, header, index) => {
             const cellContent = cells[index].textContent.trim();
-            if (cellContent) {
-                rowAcc[header] = cellContent;
-            }
+            rowAcc[header] = cellContent;
             return rowAcc;
         }, {});
         

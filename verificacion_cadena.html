@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,3 +34,41 @@
     <script src="/js/verificacion_cadena.js"></script>
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verificación de Cadena LL(1)</title>
+        <link rel="stylesheet" href="/css/verificacion_cadena.css">
+    </head>
+    <body>
+        <div class="scroll-bg"></div>
+
+        <div class="container">
+            <h1>Verificación de Cadena LL(1)</h1>
+             
+            <div>
+                <h2>Ingresar Tabla LL(1)</h2>
+                <textarea id="llTable" rows="5" cols="50" placeholder="Ingrese la tabla LL(1) en formato JSON"></textarea>
+            </div>
+             
+            <div>
+                <h2>Ingresar Cadena</h2>
+                <input type="text" id="inputString" placeholder="Ingrese la cadena a verificar">
+            </div>
+             
+            <button onclick="verificarCadena()">Verificar Cadena</button>
+             
+            <div id="resultado"></div>
+
+            <p></p>
+            <a href="../index.html" class="button">Volver al Menú</a>
+        </div>
+
+        <script src="/js/verificacion_cadena.js"></script>
+    </body>
+</html>
+
