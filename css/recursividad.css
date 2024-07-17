@@ -19,19 +19,18 @@
     z-index: -1;
     padding-bottom: 330px;
     background-color: #E8BA9B;
-    background-image: url('/funcionalidades/image.jpg');
+    background-image: url('/img/image.jpg');
     background-size: cover;
     animation: scrollBg 35s linear infinite;
 }
 
-/***********************************/
+/********************************/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
     background-color: #0a0a0a;
-    color: #4CAF50;
 }
 
 .container {
@@ -53,11 +52,10 @@ h1, h2 {
 
 textarea {
     width: 100%;
-    height: 100px;
+    height: 150px;
     padding: 0px;
     border: 1px solid #4CAF50;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    
     background-color: #0a0a0a;
     color: #4CAF50;
     resize: vertical;
@@ -80,46 +78,11 @@ button:hover, .button:hover {
     color: #fff;
 }
 
-#table-output {
-    overflow-x: auto;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    border: 1px solid #4CAF50;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #1a1a1a;
-    color: #4CAF50;
-}
-
-td {
+#output {
     background-color: #0a0a0a;
-}
-
-/********************************/
-.copy-button {
-    display: inline-block;
-    padding: 5px 10px; /* Ajusta el padding según sea necesario */
-    background-color: #4CAF50;
-    color: #000;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-left: 10px; /* Espacio entre el textarea y el botón */
-    float: right; /* Alinea a la derecha */
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.copy-button:hover {
-    background-color: #45a049;
-    color: #fff;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    padding: 10px;
+    white-space: pre-wrap;
+    color: #4CAF50;
 }
